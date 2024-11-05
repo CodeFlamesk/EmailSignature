@@ -43,19 +43,11 @@ textarea {
 	font-family: $fontFamily;
 	font-size: inherit;
 	line-height: inherit;
+}
+button {
+	cursor: pointer;
 	color: inherit;
 	background-color: transparent;
-}
-
-input,
-textarea {
-	width: 100%;
-}
-
-button,
-select,
-option {
-	cursor: pointer;
 }
 a {
 	display: inline-block;

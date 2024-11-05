@@ -43,6 +43,18 @@ export function setHash(hash) {
 	hash = hash ? `#${hash}` : window.location.href.split('#')[0];
 	history.pushState('', '', hash);
 }
+// Облік плаваючої панелі на мобільних пристроях при 100vh
+export function fullVHfix() {
+	const fullScreens = document.querySelectorAll('[data-fullscreen]');
+	if (fullScreens.length && isMobile.any()) {
+		window.addEventListener('resize', fixHeight);
+		function fixHeight() {
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		}
+		fixHeight();
+	}
+}
 // Допоміжні модулі плавного розкриття та закриття об'єкта ======================================================================================================================================================================
 export let _slideUp = (target, duration = 500, showmore = 0) => {
 	if (!target.classList.contains('_slide')) {
@@ -120,45 +132,47 @@ export let _slideToggle = (target, duration = 500) => {
 	}
 }
 // Допоміжні модулі блокування прокручування та стрибка ====================================================================================================================================================================================================================================================================================
-export let bodyLockStatus = true
+export let bodyLockStatus = true;
 export let bodyLockToggle = (delay = 500) => {
 	if (document.documentElement.classList.contains('lock')) {
-		bodyUnlock(delay)
+		bodyUnlock(delay);
 	} else {
-		bodyLock(delay)
+		bodyLock(delay);
 	}
 }
 export let bodyUnlock = (delay = 500) => {
+	let body = document.querySelector("body");
 	if (bodyLockStatus) {
-		const lockPaddingElements = document.querySelectorAll("[data-lp]");
+		let lock_padding = document.querySelectorAll("[data-lp]");
 		setTimeout(() => {
-			lockPaddingElements.forEach(lockPaddingElement => {
-				lockPaddingElement.style.paddingRight = ''
-			});
-			document.body.style.paddingRight = ''
-			document.documentElement.classList.remove("lock")
-		}, delay)
-		bodyLockStatus = false
+			for (let index = 0; index < lock_padding.length; index++) {
+				const el = lock_padding[index];
+				el.style.paddingRight = '0px';
+			}
+			body.style.paddingRight = '0px';
+			document.documentElement.classList.remove("lock");
+		}, delay);
+		bodyLockStatus = false;
 		setTimeout(function () {
-			bodyLockStatus = true
-		}, delay)
+			bodyLockStatus = true;
+		}, delay);
 	}
 }
 export let bodyLock = (delay = 500) => {
+	let body = document.querySelector("body");
 	if (bodyLockStatus) {
-		const lockPaddingElements = document.querySelectorAll("[data-lp]")
-		const lockPaddingValue = window.innerWidth - document.body.offsetWidth + 'px'
-		lockPaddingElements.forEach(lockPaddingElement => {
-			lockPaddingElement.style.paddingRight = lockPaddingValue
-		});
+		let lock_padding = document.querySelectorAll("[data-lp]");
+		for (let index = 0; index < lock_padding.length; index++) {
+			const el = lock_padding[index];
+			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		}
+		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		document.documentElement.classList.add("lock");
 
-		document.body.style.paddingRight = lockPaddingValue
-		document.documentElement.classList.add("lock")
-
-		bodyLockStatus = false
+		bodyLockStatus = false;
 		setTimeout(function () {
-			bodyLockStatus = true
-		}, delay)
+			bodyLockStatus = true;
+		}, delay);
 	}
 }
 // Модуль роботи зі спойлерами =======================================================================================================================================================================================================================

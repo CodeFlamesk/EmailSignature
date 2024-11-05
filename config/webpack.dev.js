@@ -12,7 +12,6 @@ const rootFolder = path.basename(path.resolve());
 let pugPages = fs.readdirSync(srcFolder).filter(fileName => fileName.endsWith('.pug'))
 let htmlPages = []
 
-
 if (!pugPages.length) {
 	htmlPages = [new FileIncludeWebpackPlugin({
 		source: srcFolder,
@@ -33,7 +32,6 @@ const paths = {
 	src: path.resolve(srcFolder),
 	build: path.resolve(builFolder)
 }
-
 const config = {
 	mode: "development",
 	devtool: 'inline-source-map',
@@ -173,7 +171,7 @@ const config = {
 					noErrorOnMissing: true
 				}
 			],
-		})
+		}),
 	],
 	resolve: {
 		alias: {

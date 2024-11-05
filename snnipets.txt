@@ -10,7 +10,7 @@
 		"scope": "html",
 		"prefix": "rating",
 		"body": [
-			"<div data-rating=\"set\" class=\"rating\"></div>"
+			"<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
 		],
 		"description": "Додає базовий HTML код рейтингу"
 	},
@@ -22,16 +22,6 @@
 		],
 		"description": "Додає базовий HTML код спойлерів"
 	},
-	"Keywords": {
-		"scope": "html",
-		"prefix": "keywords",
-		"body": [
-			"<div data-grid-keywords-wrapper>\n\t<div data-grid-keywords>\n\t\t<span data-grid-keywords-sizer>First Text</span>\n\t\t<span>Second Text</span>\n\t\t<span>Third Text</span>\n\t</div>\n</div>"
-		],
-		"description": "Додає базовий HTML код бігучого рядку"
-	},
-
-
 	"BeforeAfter": {
 		"scope": "html",
 		"prefix": "ba",
@@ -118,7 +108,7 @@
 		"scope": "html",
 		"prefix": "ibg",
 		"body": [
-			"<img class=\"${1:ім'я блоку}__image ibg\" src=\"@img$2\" alt=\"Image\">"
+			"<div class=\"${1:ім'я блоку}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></div>"
 		],
 		"description": "Додає об'єкт з картинкою та класом IBG"
 	},
@@ -126,7 +116,7 @@
 		"scope": "html",
 		"prefix": "ibga",
 		"body": [
-			"<a href=\"#\" class=\"${1:ім'я блоку}__link\" ><img class=\"${1:ім'я блоку}__image ibg\" src=\"@img$2\" alt=\"Image\"></a>"
+			"<a href=\"\" class=\"${1:ім'я блоку}__image-ibg\"><img data-src=\"@img$2\" alt=\"\"></a>"
 		],
 		"description": "Додає посилання з картинкою та класом IBG"
 	},
@@ -154,7 +144,7 @@
 		"scope": "scss",
 		"prefix": "em",
 		"body": [
-			"toEm($1,$2)"
+			"em($1,$2)"
 		],
 		"description": "Виклик міксину переведення в EM"
 	},
@@ -253,7 +243,7 @@
 	"Margin bottom with EM": {
 		"scope": "scss",
 		"prefix": "mbe",
-		"body": "margin-bottom: toEm($1, $2);",
+		"body": "margin-bottom: em($1, $2);",
 		"description": "Додає нижній відступ з переведенням у EM"
 	},
 	"Margin Bottom not last-child": {
@@ -268,7 +258,7 @@
 		"scope": "scss",
 		"prefix": "mble",
 		"body": [
-			"&:not(:last-child) {margin-bottom: toEm($1, $2);}"
+			"&:not(:last-child) {margin-bottom: em($1, $2);}"
 		],
 		"description": "Додає нижній відступ за винятком останнього об'єкту з переведенням у EM"
 	},
@@ -338,7 +328,7 @@
 		"scope": "scss",
 		"prefix": "md",
 		"body": [
-			"@media (max-width: toEm($1)){\n\t $2 \n}"
+			"@media (max-width: em($1)){\n\t $2 \n}"
 		],
 		"description": "Додає медіазапит max-width з перекладом у EM"
 	},
@@ -354,7 +344,7 @@
 		"scope": "scss",
 		"prefix": "mmd",
 		"body": [
-			"@media (min-width:toEm($1)){\n\t $2 \n}"
+			"@media (min-width:em($1)){\n\t $2 \n}"
 		],
 		"description": "Додає медіазапит min-width з перекладом у EM"
 	},
@@ -1096,17 +1086,17 @@
 	},
 	"Image @img": {
 		"prefix": "img",
-		"body": "<img src=\"@img$0\" alt=\"Image\">",
+		"body": "<img src=\"@img$0\" alt=\"\">",
 		"description": "img"
 	},
 	"Image": {
 		"prefix": "im",
-		"body": "<img src=\"img$0\" alt=\"Image\">",
+		"body": "<img src=\"img$0\" alt=\"\">",
 		"description": "img"
 	},
 	"Image Lazy": {
 		"prefix": "imgl",
-		"body": "<img data-src=\"@img$0\" alt=\"Image\">",
+		"body": "<img data-src=\"@img$0\" alt=\"\">",
 		"description": "img lazy load"
 	},
 	/*

@@ -20,8 +20,8 @@ export const css = () => {
 			app.plugins.if(
 				app.isBuild,
 				autoprefixer({
-					grid: false,
-					overrideBrowserslist: ["last 1 versions"],
+					grid: true,
+					overrideBrowserslist: ["last 3 versions"],
 					cascade: true
 				})
 			)
@@ -40,30 +40,11 @@ export const css = () => {
 				)
 			)
 		)
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				cleanCss({
-					format: 'beautify',
-					level: {
-						1: {
-							tidySelectors: false
-						}
-					}
-				})
-			)
-		)
 		.pipe(app.gulp.dest(app.path.build.css))
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
-				cleanCss({
-					level: {
-						1: {
-							tidySelectors: false
-						}
-					}
-				})
+				cleanCss()
 			)
 		)
 		.pipe(app.plugins.rename({ suffix: ".min" }))

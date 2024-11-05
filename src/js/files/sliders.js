@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -22,39 +22,39 @@ import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
 // import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
-import 'swiper/css';
+// import 'swiper/css';
 
 // Ініціалізація слайдерів
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-
-	if (document.querySelector('.swiper-home')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper-comments', { // Вказуємо склас потрібного слайдера
+		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 3,
-
-			spaceBetween: 16,
+			slidesPerView: 1,
+			spaceBetween: 0,
 			//autoHeight: true,
 			speed: 800,
 
-			touchRatio: 1,
+			//touchRatio: 0,
 			//simulateTouch: false,
-			loop: true,
+			//loop: true,
 			//preloadImages: false,
 			//lazy: true,
-			/* 	// Ефекти
-				effect: 'fade',
-				autoplay: {
-					delay: 3000,
-					disableOnInteraction: false,
-				},
-	 
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
 
 			// Пагінація
 			/*
@@ -65,129 +65,47 @@ function initSliders() {
 			*/
 
 			// Скроллбар
-			/* 
-						scrollbar: {
-							el: '.swiper-scrollbar',
-							draggable: true,
-						},
-			 */
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
 
 			// Кнопки "вліво/вправо"
-
 			navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-
-			/* Брейкпоінти */
-
+			/*
+			// Брейкпоінти
 			breakpoints: {
-				140: {
+				640: {
 					slidesPerView: 1,
-					spaceBetween: 15,
+					spaceBetween: 0,
 					autoHeight: true,
 				},
-				478: {
-					slidesPerView: 1.5,
-					spaceBetween: 16,
-					autoHeight: true,
-				},
-				700: {
+				768: {
 					slidesPerView: 2,
-					spaceBetween: 16,
-
+					spaceBetween: 20,
 				},
-				961: {
-					slidesPerView: 2.2,
-					spaceBetween: 16,
-
-				},
-
-				1144: {
+				992: {
 					slidesPerView: 3,
-					spaceBetween: 16,
+					spaceBetween: 20,
 				},
-
-				1358: {
-					slidesPerView: 3,
-					spaceBetween: 16,
+				1268: {
+					slidesPerView: 4,
+					spaceBetween: 30,
 				},
 			},
-
+			*/
 			// Події
 			on: {
 
 			}
 		});
 	}
-
-	/* if (document.querySelector('.swiper-home')) {
-		new Swiper('.swipper-potential', { // Вказуємо склас потрібного слайдера
-			
-			modules: [Navigation, Autoplay],
-			observer: true,
-			observeParents: true,
-			slidesPerView: 1,
-
-			spaceBetween: 0,
-		
-			speed: 800,
-
-			touchRatio: 1,
-			
-			loop: true,
-			
-
-			
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-
-
-		
-			breakpoints: {
-				140: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				478: {
-					slidesPerView: 1,
-					spaceBetween: 16,
-					autoHeight: true,
-				},
-				700: {
-					slidesPerView: 1,
-					spaceBetween: 16,
-
-				},
-				961: {
-					slidesPerView: 1,
-					spaceBetween: 16,
-
-				},
-
-				1144: {
-					slidesPerView: 1,
-					spaceBetween: 16,
-				},
-
-				1358: {
-					slidesPerView: 1,
-					spaceBetween: 16,
-				},
-			},
-
-			
-			on: {
-
-			}
-		});
-	} */
 }
-
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
 	let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
@@ -223,4 +141,3 @@ window.addEventListener("load", function (e) {
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
 	//initSlidersScroll();
 });
-
