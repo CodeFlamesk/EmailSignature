@@ -2,65 +2,32 @@
 <html>
 
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-		rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Верстка «NEW_PROJECT_NAME»</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/11ac9af1b2/UntitledProject1/style.css">
 </head>
 
 <body>
+
 	<div class="rootpage">
-		<div class="email-signature-container">
-			<div class="left-section">
-				<img src="https://i.pinimg.com/236x/dd/f2/32/ddf23255b2a516ba778b78082d4bdbcd.jpg" alt="cat"
-					class="img-author">
-				<p class="title">John Carter</p>
-				<span class="profesion">VP of Design</span>
-				<div class="links">
-					<a href="https://www.facebook.com/"><img src="https://i.ibb.co/mR2V51K/facebook.png"
-							alt="facebook"></a>
-					<a href="https://www.youtube.com/"><img src="https://i.ibb.co/XpPJD1H/youtube.png" alt="youtube"
-							class="youtube"></a>
-					<a
-						href="https://www.bing.com/ck/a?!&&p=fe3bcabfd879aab7053d13b45a59648be0977f74728fde4a1a6db766686a7840JmltdHM9MTczMDQxOTIwMA&ptn=3&ver=2&hsh=4&fclid=1c4f5003-1175-6c2f-34de-444210676d2e&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9hY2NvdW50cy9lbWFpbHNpZ251cC8&ntb=1"><img
-							src="https://i.ibb.co/Qpc0BYs/Insta.png" alt="instagram"></a>
-				</div>
-			</div>
-			<div class="right-section">
-				<img src="https://i.ibb.co/88tPhbm/logo.png" alt="logo" class="logo-img">
-				<span class="right-title">Unleash your inner designer with our customizable furniture options</span>
-				<div class="right-links">
-					<div class="img-mail"><img src="https://i.ibb.co/vhN8LNm/mail.png" alt="mail"></div>
-					email@example.com
-				</div>
-				<div class="right-links">
-					<a href="https://www.example.com/" target="_blank" class="underline-none right-links"> <span> <img
-								src="https://i.ibb.co/h20KFy2/globe.png" alt="globe">
-						</span>
-						example.com
-					</a>
-				</div>
-				<div class="phone-link">
-					<a href="tel:123456789" target="_blank" class="underline-none"><span> <img
-								src="https://i.ibb.co/yQbpbR3/smartphone.png" alt="smartphone">
-						</span>
-						123456789
-					</a>
-				</div>
-				<div class="street-link">
-					<a href="https://maps.app.goo.gl/bnEtxDBcNsC4tmuAA" target="_blank" class="underline-none">
-						<span>
-							<img src="https://i.ibb.co/wYsqJ8x/map-pin.png" alt="map-pin">
-						</span>
-						123 Main Street Anytown, CA 12345
-					</a>
-				</div>
-			</div>
+		<h1>Верстка «NEW_PROJECT_NAME»</h1>
+		<div class="rootpage__info">
+			Опис проєкту
 		</div>
+		<h2>Готові сторінки:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html">Головна</a></li>
+		</ol>
+		<h2>Попапи:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="home.html#"></a></li>
+		</ol>
+
+
 	</div>
 </body>
 <style>
@@ -83,140 +50,125 @@
 		padding: 0;
 		min-width: 320px;
 		width: 100%;
-
+		color: #fff;
+		background-color: #5e5373;
 	}
 
 	body {
-
+		font-family: Montserrat;
 		font-size: 100%;
 		line-height: 1;
 		font-size: 1rem;
 	}
 
-	.email-signature-container {
-		width: 100%;
-		max-width: 600px;
-		text-align: center;
-		font-family: Inter, sans-serif;
-
+	a {
+		text-decoration: underline;
+		color: #ebe691
 	}
 
-
-	.left-section {
-		background: #7447D7;
-		background-color: #7447D7;
-		width: 220px;
-		display: inline-block;
-		text-align: center;
-		margin-left: 16px;
+	a:visited {
+		text-decoration: underline;
+		color: #aaa768;
 	}
 
-	.right-section {
-		display: inline-block;
-		width: 100%;
-		max-width: 313px;
-		margin-left: 16px;
-		text-align: start;
-		margin-right: 16px;
-	}
-
-	.img-author {
-		width: 120px;
-		height: 120px;
-		border-radius: 64px;
-		margin-top: 27px;
-	}
-
-	.title {
-
-		font-family: Inter;
-		font-size: 20px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: 28px;
-		color: #fff;
-		margin-top: 16px;
-		margin-bottom: 0px;
-	}
-
-	.profesion {
-		font-family: Inter;
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 24px;
-		color: #fff;
-		display: block;
-	}
-
-	.youtube {
-		margin-bottom: 2px;
-		margin-top: 2px;
-		margin-left: 10px;
-		margin-right: 10px;
-	}
-
-	.links {
-		margin-top: 16px;
-		margin-bottom: 20px;
-	}
-
-	.logo-img {
-		display: block;
-		margin-bottom: 16px;
-		margin-top: 16px;
-	}
-
-	.right-title {
-		margin-bottom: 16px;
-		font-family: Inter;
-		font-size: 15px;
-		font-style: italic;
-		font-weight: 400;
-		line-height: 24px;
-		color: #667085;
-		display: block;
-	}
-
-	.right-links {
-		font-family: Inter;
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 24px;
-		color: #7447D7;
-		margin-bottom: 8px;
-	}
-
-	.phone-link {
-		color: #101828;
-		font-family: Inter;
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 24px;
-		margin-bottom: 8px;
-	}
-
-
-
-	.img-mail {
-		display: inline-block;
-	}
-
-	.street-link {
-		color: #101828;
-		font-family: Inter;
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 24px;
-		margin-bottom: 16px;
-	}
-
-	.underline-none {
+	a:hover {
 		text-decoration: none;
-		color: #7447D7;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #ebe691;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #ebe691;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #32b5a4;
+
+	}
+
+	.rootpage__contacts a {
+		color: #ebe691;
+	}
+
+	.rootpage__tnx {
+		background: #c22d63;
+		margin: 0px 0px 1rem 0px;
 	}
 </style>
 

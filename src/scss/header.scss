@@ -1,0 +1,301 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: toRem(64);
+    justify-content: center;
+    margin-left: toRem(15);
+    margin-right: toRem(15);
+    max-width: 100%;
+
+    // .header__menu
+    &__menu {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    // .header__actions
+
+
+
+    // .header__button-header
+    &__button-header {
+        align-items: center;
+    }
+}
+
+.menu {
+
+    width: toRem(1280);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-family: Inter;
+        font-weight: 500;
+        font-size: toRem(16);
+    }
+
+
+
+    // .menu__icon
+    &__icon {}
+
+    // .menu__body
+    &__body-menu {
+        display: flex;
+        align-items: center;
+
+
+
+    }
+
+    &__actions-header {}
+}
+
+.body-menu {
+    display: flex;
+    align-items: center;
+    padding-left: toRem(28);
+
+    font-family: Inter;
+    font-weight: 500;
+    font-size: toRem(16);
+
+    @media (max-width:$mobile) {
+        padding-left: toRem(0);
+
+    }
+
+
+}
+
+input[type="text"] {
+    height: toRem(40);
+    border-radius: toRem(8);
+    max-width: toRem(622);
+    @include adaptiveValue("width", 580, 300, 0, 1252, 991.98);
+    outline: none;
+
+    @media (max-width:$tablet) {
+        @include adaptiveValue("width", 452, 300, 0, 991.98, 767.98);
+    }
+
+    @media (max-width:$mobile) {
+        @include adaptiveValue("width", 508, 198, 0, 767.98, 420);
+    }
+}
+
+
+.body-menu {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: toRem(14);
+
+    @media (max-width:$mobile) {
+        margin: 0 auto;
+        margin-left: toRem(0);
+
+    }
+
+    &__input-header {
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid #000000;
+        height: toRem(40);
+        border-radius: toRem(8);
+        @include adaptiveValue("width", 622, 300, 0, 1252, 991.98);
+        @include adaptiveValue("margin-left", 33, 20, 0, 1252, 767.98);
+
+        @media (max-width:$tablet) {
+            @include adaptiveValue("width", 500, 300, 0, 991.98, 767.98);
+        }
+
+        @media (max-width:$mobile) {
+            @include adaptiveValue("width", 550, 240, 0, 767.98, 420);
+            padding-left: 0;
+
+        }
+
+    }
+}
+
+.input-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (min-width:$tablet) {
+        margin-right: toRem(40);
+    }
+
+
+    &__find {
+        margin-left: toRem(10);
+        margin-right: toRem(10);
+        width: toRem(16);
+        height: toRem(16);
+    }
+}
+
+.input {}
+
+.menu {
+
+    &__actions-header {}
+
+}
+
+.actions-header {
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    width: toRem(206);
+    justify-content: space-between;
+
+    @media (max-width:$mobile) {
+
+        display: flex;
+        flex-direction: column;
+        gap: toRem(20);
+    }
+
+    &__basket {
+        width: toRem(24);
+        height: toRem(24);
+    }
+
+    &__log-in {}
+
+    &__sign-in {}
+
+    @media (max-width:$tablet) {
+        margin-right: toRem(20);
+    }
+}
+
+
+
+/* sssssssssssssssssssssssssss */
+
+
+
+
+
+
+
+
+
+
+
+
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.open {
+
+    display: flex !important;
+
+    align-items: center;
+    flex-direction: column;
+}
+
+.burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #000000;
+}
+
+.burger::before,
+.burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+    top: 0
+}
+
+.burger::after {
+    bottom: 0
+}
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span {
+    transform: scale(0)
+}
+
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+@media (max-width: 991.98px) {
+
+    .burger {
+        display: flex
+    }
+
+    .test {
+        color: red;
+    }
+
+    .nav {
+        gap: toRem(20);
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 49;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: rgb(161, 21, 21);
+        animation: burgerAnimation 0.4s;
+        color: white;
+
+    }
+
+    .nav ul {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+@keyframes burgerAnimation {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}

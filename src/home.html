@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+<script src="https://kit.fontawesome.com/3cc8eca241.js" crossorigin="anonymous"></script>
+
+<body>
+	<div class="wrapper">
+
+		<main class="page">
+			<div class="email-signature-container">
+				<div class="left-section">
+					<img src="https://i.pinimg.com/236x/dd/f2/32/ddf23255b2a516ba778b78082d4bdbcd.jpg" alt="cat"
+						class="img-author">
+					<p class="title">John Carter</p>
+					<span class="profesion">VP of Design</span>
+					<div class="links">
+						<a href="https://www.facebook.com/"><img src="https://i.ibb.co/mR2V51K/facebook.png"
+								alt="facebook"></a>
+						<a href="https://www.youtube.com/"><img src="https://i.ibb.co/XpPJD1H/youtube.png" alt="youtube"
+								class="youtube"></a>
+						<a
+							href="https://www.bing.com/ck/a?!&&p=fe3bcabfd879aab7053d13b45a59648be0977f74728fde4a1a6db766686a7840JmltdHM9MTczMDQxOTIwMA&ptn=3&ver=2&hsh=4&fclid=1c4f5003-1175-6c2f-34de-444210676d2e&psq=instagram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9hY2NvdW50cy9lbWFpbHNpZ251cC8&ntb=1"><img
+								src="https://i.ibb.co/Qpc0BYs/Insta.png" alt="instagram"></a>
+					</div>
+				</div>
+				<div class="right-section">
+					<img src="https://i.ibb.co/88tPhbm/logo.png" alt="logo" class="logo-img">
+					<span class="right-title">Unleash your inner designer with our customizable furniture options</span>
+					<div class="right-links">
+						<div class="img-mail"><img src="https://i.ibb.co/vhN8LNm/mail.png" alt="mail"></div>
+						email@example.com
+					</div>
+					<div class="right-links">
+						<a href="https://www.example.com/" target="_blank" class="underline-none right-links"> <span>
+								<img src="https://i.ibb.co/h20KFy2/globe.png" alt="globe">
+							</span>
+							example.com
+						</a>
+					</div>
+					<div class="phone-link">
+						<a href="tel:123456789" target="_blank" class="underline-none"><span> <img
+									src="https://i.ibb.co/yQbpbR3/smartphone.png" alt="smartphone">
+							</span>
+							123456789
+						</a>
+					</div>
+					<div class="street-link">
+						<a href="https://maps.app.goo.gl/bnEtxDBcNsC4tmuAA" target="_blank" class="underline-none">
+							<span>
+								<img src="https://i.ibb.co/wYsqJ8x/map-pin.png" alt="map-pin">
+							</span>
+							123 Main Street Anytown, CA 12345
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

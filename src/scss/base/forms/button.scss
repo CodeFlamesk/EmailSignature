@@ -4,11 +4,53 @@
 .button {
 	display: inline-flex;
 	padding: 0px 0px;
+
 	@media (any-hover: hover) {
-		&:hover {
-		}
+		&:hover {}
 	}
+
 	&--fw {
 		width: 100%;
 	}
+}
+
+.actions-header {
+
+	&__log-in {
+		height: toRem(40);
+		width: toRem(61);
+		border: 1px solid rgb(51, 65, 85);
+		font-family: Inter;
+		font-weight: 500;
+		font-size: toRem(14);
+
+
+	}
+
+	&__sign-in {
+		font-family: Inter;
+		font-weight: 500;
+		font-size: toRem(14);
+		height: toRem(40);
+		width: toRem(73);
+		background: rgb(51, 65, 85);
+		color: white;
+	}
+}
+
+.text-first-section__start-journey {
+	background-color: rgb(59, 130, 246);
+	max-width: toRem(238);
+	height: toRem(48);
+	color: white;
+	font-family: Inter;
+	font-weight: 500;
+	font-size: toRem(14);
+	border-radius: toRem(8);
+	margin-top: toRem(24);
+
+	@media (max-width: toRem(653)) {
+		width: 100%;
+	}
+
 }
