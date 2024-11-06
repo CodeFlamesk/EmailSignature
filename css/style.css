@@ -377,7 +377,8 @@ h6 {
   padding-top: 30px
 }
 .second-img-author {
-  height: 303px
+  height: 303px;
+  padding-left: 15px
 }
 @media (max-width:40.8125rem) {
   .text-first-section__start-journey {
