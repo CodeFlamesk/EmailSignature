@@ -380,6 +380,79 @@ h6 {
   height: 303px;
   padding-left: 15px
 }
+.third-signature-container {
+  padding-bottom: 24px;
+  width: 100%;
+  max-width: 506px;
+  height: 100%
+}
+.container-walmart-img {
+  margin-top: 24px;
+  display: inline-block;
+  height: 88px;
+  width: 88px;
+  margin-left: 24px
+}
+.table-container {
+  padding-top: 24px;
+  display: inline-block;
+  width: 100%;
+  max-width: 346px;
+  margin-left: 24px;
+  text-align: start
+}
+.walmart-author {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  max-width: 250px
+}
+.walmart-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 89px;
+  height: 36px
+}
+.walmart-name {
+  color: #0071ce;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px
+}
+.walmaper-container {
+  display: inline-block
+}
+.walmart-title {
+  color: #878787;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px
+}
+.first-td {
+  display: inline-block;
+  width: 100%;
+  max-width: 346px
+}
+.tr-text {
+  color: #878787;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal
+}
+.td-text {
+  display: inline-block;
+  margin-left: 8px
+}
+.td-name {
+  font-size: 12px;
+  font-weight: 600
+}
 @media (max-width:40.8125rem) {
   .text-first-section__start-journey {
     width: 100%
