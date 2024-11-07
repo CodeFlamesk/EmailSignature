@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,500italic,600,600italic&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic&display=swap);
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&display=swap);
 @font-face {
   font-family: icons;
   font-display: swap;
@@ -452,6 +454,80 @@ h6 {
 .td-name {
   font-size: 12px;
   font-weight: 600
+}
+.four-containier {
+  width: 100%;
+  max-width: 800px;
+  padding-top: 26px
+}
+.four-author-info {
+  display: inline-block;
+  padding-top: 46px;
+  padding-left: 2.75rem;
+  padding-right: 3.125rem
+}
+.four-name {
+  color: #1d1919;
+  font-family: Lato;
+  font-size: 27.82px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30.602px
+}
+.four-img {
+  margin-left: 44px
+}
+.four-author {
+  width: 100%;
+  max-width: 252px;
+  padding-top: 10px;
+  color: #4c4440;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400
+}
+.four-links {
+  padding-top: 2rem;
+  color: #1d1919;
+  font-family: Lato;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal
+}
+.four-linkedin {
+  display: inline-block
+}
+.four-facebook {
+  display: inline-block;
+  padding-right: 2.875rem;
+  padding-left: 2.875rem
+}
+.four-instagram {
+  display: inline-block
+}
+.four-contact {
+  padding-top: 32px;
+  display: inline-block;
+  color: #1d1919;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 2.75rem
+}
+.four-tell {
+  display: block
+}
+.four-web {
+  display: block;
+  padding-top: 28px
+}
+.four-place {
+  display: block;
+  padding-top: 32px
 }
 @media (max-width:40.8125rem) {
   .text-first-section__start-journey {
